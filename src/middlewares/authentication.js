@@ -13,6 +13,7 @@ module.exports = asyncHandler(async(req,res, next)=>{
                 throw new Error("User  is not authorized");
             }
             req.user = decoded.user;
+            console.log("User is authorized:", req.user);
             next();
         })
     }
